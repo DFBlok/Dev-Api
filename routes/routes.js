@@ -42,8 +42,18 @@ router.get("/getOne/:id", async (req, res) => {
 });
 
 //Update by ID Method
-router.patch("/update/:id", (res, req) => {
-  res.send("Update by ID API");
+router.patch("/update/:id", async (req, res) => {
+  /* res.send("Update by ID API"); */
+  try {
+    const id = req.params.id;
+    const updatedData = req.body;
+    const options = { new: true };
+
+    const result = await Model.findByIdAndUpdate(id, updatedData, options);
+    return res.send(result);
+  } catch (error) {
+    return res.status(400).json({ message: error.message });
+  }
 });
 
 //DELETE by ID Method
