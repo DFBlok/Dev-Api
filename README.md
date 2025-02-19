@@ -68,7 +68,7 @@ By default, the server will run on http://localhost:3000.
   }
 ]
 ```
-#🐞 Error Handling
+# 🐞 Error Handling
 
 If something goes wrong, the API returns an error message:
 ```
@@ -76,7 +76,7 @@ If something goes wrong, the API returns an error message:
   "message": "Error description here"
 }
 ```
-#📚 Technologies Used
+# 📚 Technologies Used
 
 - Node.js
 
@@ -84,7 +84,7 @@ If something goes wrong, the API returns an error message:
 
 - MongoDB & Mongoose
 
-#📬 Contact
+# 📬 Contact
 
 If you have any issues, feel free to reach out!
 
