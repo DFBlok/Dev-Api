@@ -1,10 +1,22 @@
 const express = require("express");
+const Model = require("../models/model");
 
 const router = express.Router();
 
 //POST METHOD
-router.post("/post", (req, res) => {
-  res.send("Post API");
+router.post("/post", async (req, res) => {
+  try {
+    const data = new Model({
+      name: req.body.name,
+      age: req.body.age,
+    });
+
+    const dataToSave = await data.save();
+    //ALWAYS add return after sending a response
+    return res.status(200).json(dataToSave);
+  } catch (error) {
+    return res.status(400).json({ message: error.message });
+  }
 });
 
 //GET ALL METHOD
