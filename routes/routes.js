@@ -24,15 +24,21 @@ router.get("/getAll", async (req, res) => {
   /* res.send("Get All API"); */
   try {
     const data = await Model.find();
-    res.json(data);
+    return res.json(data);
   } catch (error) {
-    res.status(500).json({ message: error.message });
+    return res.status(500).json({ message: error.message });
   }
 });
 
 //Get by ID Method
-router.get("/getOne/:id", (req, res) => {
-  res.send(req.params.id);
+router.get("/getOne/:id", async (req, res) => {
+  /* res.send(req.params.id); */
+  try {
+    const data = await Model.findById(req.params.id);
+    return res.json(data);
+  } catch (error) {
+    return res.status(500).json({ message: error.message });
+  }
 });
 
 //Update by ID Method
