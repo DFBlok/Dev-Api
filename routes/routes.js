@@ -57,8 +57,15 @@ router.patch("/update/:id", async (req, res) => {
 });
 
 //DELETE by ID Method
-router.delete("/delete/:id", (req, res) => {
-  res.send("DELETE by ID API");
+router.delete("/delete/:id", async (req, res) => {
+  /* res.send("DELETE by ID API"); */
+  try {
+    const id = req.params.id;
+    const data = await Model.findByIdAndDelete(id);
+    return res.send(`Document with ${data.name} has been deleted...`);
+  } catch (error) {
+    return res.status(400).json({ message: error.message });
+  }
 });
 
 module.exports = router;
