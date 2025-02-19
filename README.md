@@ -4,13 +4,13 @@ This is a simple REST API built with Node.js, Express, and MongoDB. It allows us
 
 🚀 Features
 
-Connects to MongoDB
+- Connects to MongoDB
 
-RESTful endpoints for CRUD operations
+- RESTful endpoints for CRUD operations
 
-Uses Express.js for backend routing
+- Uses Express.js for backend routing
 
-Handles errors properly
+- Handles errors properly
 
 🛠️ Setup Instructions
 
@@ -23,10 +23,10 @@ npm install
 2️⃣ Set Up Environment Variables
 
 Create a .env file in the root directory and add:
-
+```
 PORT=3000
 MONGO_URI=mongodb+srv://<your-mongodb-uri>
-
+```
 3️⃣ Start the Server
 ```
 npm start
