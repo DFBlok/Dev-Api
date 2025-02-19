@@ -1,8 +1,8 @@
-📌 Express API with MongoDB
+# 📌 Express API with MongoDB
 
-This is a simple REST API built with Node.js, Express, and MongoDB. It allows users to add and retrieve data.
+This is a simple REST API built with ***Node.js, Express, and MongoDB***. It allows users to add and retrieve data.
 
-🚀 Features
+# 🚀 Features
 
 - Connects to MongoDB
 
@@ -12,17 +12,17 @@ This is a simple REST API built with Node.js, Express, and MongoDB. It allows us
 
 - Handles errors properly
 
-🛠️ Setup Instructions
+# 🛠️ Setup Instructions
 
-1️⃣ Install Dependencies
+***1️⃣ Install Dependencies**
 
 ```
 npm install
 ```
 
-2️⃣ Set Up Environment Variables
+***2️⃣ Set Up Environment Variables***
 
-Create a .env file in the root directory and add:
+Create a ```.env``` file in the root directory and add:
 ```
 PORT=3000
 MONGO_URI=mongodb+srv://<your-mongodb-uri>
@@ -36,7 +36,7 @@ By default, the server will run on http://localhost:3000.
 📌 API Endpoints
 
 ✅ 1. Create a User
-```
+
 POST /api/post
 ```
 {
@@ -54,9 +54,9 @@ POST /api/post
 }
 ```
 ✅ 2. Get All Users
-```
+
 GET /api/users
-```
+
 📌 Response:
 ```
 [
