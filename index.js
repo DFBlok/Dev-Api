@@ -3,6 +3,10 @@ const express = require("express");
 const mongoose = require("mongoose");
 const mongoString = process.env.DATABASE_URL;
 const app = express();
+//routes
+const routes = require("./routes/routes");
+
+app.use("/api", routes);
 
 app.use(express.json());
 mongoose.connect(mongoString);
