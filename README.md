@@ -14,37 +14,37 @@ This is a simple REST API built with ***Node.js, Express, and MongoDB***. It all
 
 # 🛠️ Setup Instructions
 
-***1️⃣ Install Dependencies**
+**1️⃣ Install Dependencies**
 
 ```
 npm install
 ```
 
-***2️⃣ Set Up Environment Variables***
+**2️⃣ Set Up Environment Variables**
 
 Create a ```.env``` file in the root directory and add:
 ```
 PORT=3000
 MONGO_URI=mongodb+srv://<your-mongodb-uri>
 ```
-3️⃣ Start the Server
+**3️⃣ Start the Server**
 ```
 npm start
 ```
 By default, the server will run on http://localhost:3000.
 
-📌 API Endpoints
+#📌 API Endpoints**
 
-✅ 1. Create a User
+**✅ 1. Create a User**
 
-POST /api/post
+***POST*** ```/api/post```
 ```
 {
   "name": "John Doe",
   "age": 25
 }
 ```
-📌 Response:
+**📌 Response:**
 ```
 {
   "_id": "65c123456abc",
@@ -53,11 +53,11 @@ POST /api/post
   "__v": 0
 }
 ```
-✅ 2. Get All Users
+**✅ 2. Get All Users**
 
-GET /api/users
+**GET** ```/api/users```
 
-📌 Response:
+**📌 Response:**
 ```
 [
   {
@@ -68,23 +68,23 @@ GET /api/users
   }
 ]
 ```
-🐞 Error Handling
+#🐞 Error Handling
 
 If something goes wrong, the API returns an error message:
-
+```
 {
   "message": "Error description here"
 }
+```
+#📚 Technologies Used
 
-📚 Technologies Used
+- Node.js
 
-Node.js
+- Express.js
 
-Express.js
+- MongoDB & Mongoose
 
-MongoDB & Mongoose
-
-📬 Contact
+#📬 Contact
 
 If you have any issues, feel free to reach out!
 
