@@ -16,7 +16,9 @@ Handles errors properly
 
 1️⃣ Install Dependencies
 
+'''
 npm install
+'''
 
 2️⃣ Set Up Environment Variables
 
